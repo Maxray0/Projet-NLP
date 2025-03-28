@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+transformers
+pytesseract
+Pillow
+PyMuPDF
+torch
+torchvision
+torchaudio
