@@ -1,14 +1,14 @@
 fastapi
 uvicorn
-transformers
+transformers>=4.41.0,<5.0.0
+sentence-transformers==4.0.1
 pytesseract
 Pillow
 PyMuPDF
 torch
 torchvision
 torchaudio
-tensorflow-intel==2.16.2
-transformers==4.39.3
+tensorflow==2.16.2    # ou tensorflow-macos et tensorflow-metal si Apple Silicon
 keras
 tensorboard<2.17
 python-multipart
