@@ -25,9 +25,10 @@ st.markdown("""
 # Barre de navigation personnalisée dans le sidebar
 with st.sidebar:
     st.title("🧭 Navigation")
-    st.page_link("home.py", label="🏠 Accueil", disabled=True)
+    st.page_link("home.py", label="🏠 Accueil")
     st.page_link("pages/traduction.py", label="💬 Traduction")
     st.page_link("pages/analyse_cv.py", label="📄 Analyse CV")
+    st.page_link("pages/mood.py", label="📝 Analyse de sentiment")
     st.page_link("pages/analyse_docs.py", label="🗂 Docs Admin.")
 
 def main():
@@ -49,7 +50,9 @@ def main():
     try:
         response = requests.get("http://localhost:8000/languages")
         if response.status_code == 200:
-            languages = response.json()
+            data = response.json()  # data is likely a list of languages
+            # Convert list to a dict (identity mapping, or adapt as needed)
+            languages = {lang: lang for lang in data}  
         else:
             languages = {"Français": "fra_Latn", "Anglais": "eng_Latn"}
     except:

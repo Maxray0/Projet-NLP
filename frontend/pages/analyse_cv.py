@@ -16,9 +16,10 @@ st.markdown(
 # Barre de navigation personnalisée
 with st.sidebar:
     st.title("🧭 Navigation")
-    st.page_link("home.py", label="🏠 Accueil", disabled=True)
+    st.page_link("home.py", label="🏠 Accueil")
     st.page_link("pages/traduction.py", label="💬 Traduction")
     st.page_link("pages/analyse_cv.py", label="📄 Analyse CV")
+    st.page_link("pages/mood.py", label="📝 Analyse de sentiment")
     st.page_link("pages/analyse_docs.py", label="🗂 Docs Admin.")
 # Imports des fonctions métier (à adapter selon votre implémentation)
 try:
