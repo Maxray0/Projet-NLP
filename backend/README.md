@@ -24,7 +24,7 @@ This project uses FastAPI to create an API for processing and translating text f
 ## Usage
 1. Run the FastAPI server:
     ```bash
-    uvicorn backend.main:app --reload
+    uvicorn backend.api:app --reload
     ```
 
 2. Open your browser and navigate to `http://127.0.0.1:8000/docs` to access the interactive API documentation.
@@ -41,3 +41,6 @@ curl -X 'POST' \
   -H 'Content-Type: multipart/form-data' \
   -F 'file=@<path-to-your-file>' \
   -F 'target_lang=en'
+```
+## ques ce c'est
+pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
